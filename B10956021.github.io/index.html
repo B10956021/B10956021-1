@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        img {
+            vertical-align: bottom;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        .title {
+            margin: 0 0px 20px;
+            padding: 30px 10px;
+            background-color: #ccc;
+        }
+        
+        .banner img {
+            width: 100%;
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 36px;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        
+        .title p {
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .title h1 {
+            font-size: 26px;
+        }
+        
+        .item {
+            margin: 0 10px 40px;
+        }
+        
+        .item h3 {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .item p {
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .service {
+            margin: 60px 0;
+            background-color: #ccc;
+        }
+        
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex;
+            }
+            .service .item {
+                display: flex;
+                margin: 0;
+            }
+            .service .item .pic,
+            .service .item .text {
+                width: 50%;
+                margin: 0;
+            }
+            .service .item .text {
+                display: flex;
+                padding: 0 20px;
+                box-sizing: border-box;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        
+        #menu_control {
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: #ccc;
+            position: relative;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 40px;
+            margin-left: 10px;
+        }
+        
+        .logo a {
+            display: block;
+            height: 40px;
+        }
+        
+        .logo img {
+            display: block;
+        }
+        
+        .menu_btn {
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .menu_btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .menu_btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 36px;
+            left: 2px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+        }
+        
+        nav {
+            width: 80%;
+            height: calc(100vh-50px);
+            background-color: white;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+        }
+        
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: #282923;
+            padding: 10px 20px;
+            border-bottom: 1px solid #282923;
+        }
+        
+        #menu_control:checked~.header nav {
+            left: 0;
+        }
+        
+        @media screen and (min-width:768px) {
+            .menu_btn {
+                display: none;
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                align-items: center;
+            }
+            nav {
+                display: flex;
+                position: relative;
+                left: 0;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent;
+            }
+            nav a {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://mis.npust.edu.tw/wp-content/uploads/2019/05/LOGO-D2-2S-1.png"></a>
+        </h1>
+        <label for="menu_control" class="menu_btn">
+            <span>選單</span>
+        </label>
+        <nav>
+            <a href="#">首頁</a>
+            <a href="#">新聞</a>
+            <a href="#">成果</a>
+            <a href="#">師資</a>
+            <a href="#">課程</a>
+            <a href="#">關於</a>
+            <a href="#">活動下載</a>
+            <a href="#">快速連結</a>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <img src="http://images.1111.com.tw/discussPic/30/53162930_145020493.365508.jpg">
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>資訊管理系</h2>
+                <p>成立於民國82年，設二年制一班，83年增設研究所碩士班，於89年度起改招四年制，停招二技，90年增設研究所碩士在職專班，形成一個兼具研究與教學特色的新興科系。</p>
+                <h1>
+                    <center>以下為資管系師資(女)</center>
+                </h1>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/06/0620-500x500.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>賴佳瑜（Chia-Yu Lai）助理教授</h3>
+                        <p>專長為大數據分析、文字探勘、機器學習、金融財務探勘。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/04/CE-04蔡玉娟-e1566654380676-500x500.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>蔡玉娟（Yuh-Jiuan Tsay）教授</h3>
+                        <p>專長為資料探勘、影像辨識、資訊管理、大數據分析。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/04/172348891-500x500.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>邵敏華（Min-Hua Shao）副教授</h3>
+                        <p>專長為資訊安全、區塊鏈、金融科技、電子商務。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="data:image/jpeg;base64,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">
+                    </div>
+                    <div class="text">
+                        <h3>教育目標</h3>
+                        <p>本系之學生培育目標定位為資管應用服務與整合系統，本系的 Slogan：建立積極的系 － 培育專業的學生（Professional Students From a Vigorous Department） 。旨在培養專業創新、理論與實務並重的資管技術人員和資管經理人才，即台灣資管領域中堅人才。藉由培養學生專業與創新能力之目標下，建立系所優質學習環境。具體而言，本系培養資管人才以市場需求為導向，配合政府產業發展之資訊科技應用需求及趨勢，因應南部港灣地區工商業之快速發展導向，在學術上注重基本理論與學習能力的培養；在實務上注重工作實務與產學交流，落實理論與學習能力的培養。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>以下為資管系師資(男)</h2>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/09/DN_FB-1-e1568692657282.jpg"></div>
+                    <div class="text">
+                        <h3>陳灯能（Deng-Neng Chen）教授兼資訊管理系主任</h3>
+                        <p>專長為大數據分析、文字探勘、人工智慧、知識管理、電子商務。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src=" https://mis.npust.edu.tw/wp-content/uploads/2019/04/CE-07劉書助-e1566654420190-500x500.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>劉書助（Shu-Chu Liu）教授兼管理學院院長 </h3>
+                        <p>專長為供應鏈管理、電子商務、決策分析、人工智慧應用。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/08/Kung2-500x500.jpg ">
+                    </div>
+                    <div class="text">
+                        <h3>龔旭陽（Hsu-Yang Kung）特聘教授</h3>
+                        <p>專長為分散式多媒體應用系統、電腦網路、行動計算與無線網際網路。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src=" https://mis.npust.edu.tw/wp-content/uploads/2019/09/ughuRSz-500x500.jpg  ">
+                    </div>
+                    <div class="text">
+                        <h3>童曉儒（Sheau-Ru Tong）教授</h3>
+                        <p>專長為多媒體網際網路、分散式多媒體系統、隨選視訊系統、無線與行動通訊。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/04/CE-03蔡正發-e1566654738769-500x500.jpg ">
+                    </div>
+                    <div class="text">
+                        <h3>蔡正發（Cheng-Fa Tsai）教授</h3>
+                        <p>專長為大數據分析與應用、資料庫與資料探勘、行動通訊、網路影像處理。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/04/CE-10樊台聖-500x500.jpg  ">
+                    </div>
+                    <div class="text">
+                        <h3>樊台聖（Tai-Sheng Fan）副教授 </h3>
+                        <p> 專長為資訊法規、資訊教育、資訊倫理、資訊安全管理、管理學、管理心理學。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://mis.npust.edu.tw/wp-content/uploads/2019/04/S__30015498-500x500.jpg  ">
+                    </div>
+                    <div class="text">
+                        <h3> 劉寧漢（Ning-Han Liu)教授</h3>
+                        <p>專長為多媒體資料庫、數位內容管理、資料倉儲/探勘、生物資訊。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>屏東科技大學 資訊管理系 </footer>
+
+
+</body>
+
+</html>
